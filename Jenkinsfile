@@ -3,8 +3,7 @@
 pipeline {
     environment {
         registry = "bourseapp"
-        registryCredential = 'hub-credential'
-    }`
+    }
     
     agent any  
 
@@ -16,10 +15,10 @@ pipeline {
             }
         }
 
-        stage('Build & Deploy Image') {
+        stage('Buiild & Deploy Image') {
             steps{
                 script {
-                    docker.withRegistry('https://hub.appme.ir', registryCredential) {
+                    docker.withRegistry('http://192.168.100.100:5000', '') {
                         def app = docker.build(registry + ":$VERSION")
                         app.push()
                     }
