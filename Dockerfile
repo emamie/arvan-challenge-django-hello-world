@@ -18,4 +18,3 @@ RUN set -e; \
 EXPOSE 9000
 
 CMD ["python", "manage.py", "runserver"]
-
