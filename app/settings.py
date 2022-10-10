@@ -25,7 +25,7 @@ SECRET_KEY = '$d5c5h&vkazayd$nevzv2%xrexgv9jv0rauzx(+ue^-0)##&ly'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','appme.ir','www.appme.ir']
 
 
 # Application definition
